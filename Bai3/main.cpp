@@ -32,6 +32,24 @@ int main() {
     Thoigian t6;
     cin >> t6;
 	cout << "t6: " << t6 << endl;
+    Thoigian t7;
+	cin >> t7;
+	cout << "t7: " << t7 << endl;
+
+	cout << "t6 + t7: " << t6 + t7 << endl;
+	cout << "t6 - t7: " << t6 - t7 << endl;
+	cout << "t6 == t7: " << (t6 == t7 ? "True" : "False") << endl;
+	cout << "t6 != t7: " << (t6 != t7 ? "True" : "False") << endl;
+	cout << "t6 > t7: " << (t6 > t7 ? "True" : "False") << endl;
+	cout << "t6 < t7: " << (t6 < t7 ? "True" : "False") << endl;
+	cout << "t6 >= t7: " << (t6 >= t7 ? "True" : "False") << endl;
+	cout << "t6 <= t7: " << (t6 <= t7 ? "True" : "False") << endl;
+
+    ++t6;
+	cout << "After incrementing t6: " << t6 << endl;
+
+	t6--;
+	cout << "After decrementing t6: " << t6 << endl;
 
     return 0;
 }

@@ -208,7 +208,7 @@ bool operator!=(const Phanso& lhs, const Phanso& rhs) {
  * @return istream The input stream
  */
 
-istream& operator>>(istream& is, Phanso& ps) {
+istream& operator>>(istream& is,Phanso& ps) {
 	is >> ps.iTu;
 	is >> ps.iMau;
 	return is;
@@ -222,7 +222,7 @@ istream& operator>>(istream& is, Phanso& ps) {
  * @return ostream The output stream
  */
 
-ostream& operator<<(ostream& os, Phanso& ps) {
+ostream& operator<<(ostream& os,const Phanso& ps) {
 	os << ps.iTu << "/" << ps.iMau;
 	return os;
 }

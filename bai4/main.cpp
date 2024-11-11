@@ -7,22 +7,22 @@ int main() {
     NgayThangNam a(1, 1, 2020);
     NgayThangNam b(1, 1, 2020);
 
-    cout << ((a == b) ? "Dung" : "Sai") << endl;
-    cout << ((a != b) ? "Dung" : "Sai") << endl;
-    cout << ((a < b) ? "Dung" : "Sai") << endl;
-    cout << ((a > b) ? "Dung" : "Sai") << endl;
-    cout << ((a <= b) ? "Dung" : "Sai") << endl;
-    cout << ((a >= b) ? "Dung" : "Sai") << endl;
+    cout << ((a == b) ? "True" : "False") << endl;
+    cout << ((a != b) ? "True" : "False") << endl;
+    cout << ((a < b) ? "True" : "False") << endl;
+    cout << ((a > b) ? "True" : "False") << endl;
+    cout << ((a <= b) ? "True" : "False") << endl;
+    cout << ((a >= b) ? "True" : "False") << endl;
 
     NgayThangNam c(15, 5, 2021);
     NgayThangNam d(1, 1, 2022);
 
-    cout << ((c == d) ? "Dung" : "Sai") << endl;
-    cout << ((c != d) ? "Dung" : "Sai") << endl;
-    cout << ((c < d) ? "Dung" : "Sai") << endl;
-    cout << ((c > d) ? "Dung" : "Sai") << endl;
-    cout << ((c <= d) ? "Dung" : "Sai") << endl;
-    cout << ((c >= d) ? "Dung" : "Sai") << endl;
+    cout << ((c == d) ? "True" : "False") << endl;
+    cout << ((c != d) ? "True" : "False") << endl;
+    cout << ((c < d) ? "True" : "False") << endl;
+    cout << ((c > d) ? "True" : "False") << endl;
+    cout << ((c <= d) ? "True" : "False") << endl;
+    cout << ((c >= d) ? "True" : "False") << endl;
 
     NgayThangNam e(31, 12, 2021);
 
@@ -53,6 +53,23 @@ int main() {
     cout << "Enter a date (day, month, year): ";
     cin >> userDate;
     cout << "You entered: " << userDate << endl;
+    NgayThangNam userDate2;
+	cout << "Enter another date (day, month, year): ";
+	cin >> userDate2;
+	cout << "You entered: " << userDate2 << endl;
+    if (userDate > userDate2) {
+        cout << "Difference between the two dates: " << (userDate - userDate2).toDays() << " days" << endl;
+	}
+	else {
+		cout << "Difference between the two dates: " << (userDate2 - userDate).toDays() << " days" << endl;
+	}
+	userDate++;
+	cout << "After incrementing the first date: " << userDate << endl;
+	userDate2--;
+	cout << "After decrementing the second date: " << userDate2 << endl;
+
+	cout << "Comparing the two dates:" << endl;
+	cout << ((userDate == userDate2) ? "True" : "False") << endl;
 
     return 0;
 }

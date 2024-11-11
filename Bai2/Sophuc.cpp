@@ -155,4 +155,4 @@ bool operator==(const Sophuc& lhs, const Sophuc& rhs) {
 
 bool operator!=(const Sophuc& lhs, const Sophuc& rhs) {
 	return lhs.dThuc != rhs.dThuc || lhs.dAo != rhs.dAo;
-}
+}	

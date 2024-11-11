@@ -30,6 +30,29 @@ int main() {
     cout << "Enter a complex number (real and imaginary parts): ";
     cin >> s4;
     cout << "You entered: " << s4 << endl;
+    Sophuc s5;
+    cout << "Enter a complex number (real and imaginary parts): ";
+    cin >> s5;
+    cout << "You entered: " << s5 << endl;
+
+    Sophuc sum1 = s4 + s5;
+    cout << s4 << " + " << s5 << " = " << sum1 << endl;
+
+    Sophuc diff1 = s4 - s5;
+    cout << s4 << " - " << s5 << " = " << diff1 << endl;
+
+    Sophuc prod1 = s4 * s5;
+    cout << s4 << " * " << s5 << " = " << prod1 << endl;
+
+    Sophuc div1 = s4 / s5;
+    cout << s4 << " / " << s5 << " = " << div1 << endl;
+
+    bool ok11 = (s4 == s5);
+    cout << s4 << " == " << s5 << ": " << (ok11 ? "True" : "False") << endl;
+
+    bool ok22 = (s4 != s5);
+    cout << s4 << " != " << s5 << ": " << (ok22 ? "True" : "False") << endl;
+
 
     return 0;
 }

@@ -14,6 +14,7 @@ public:
 	bool isLeapYear(int year);
 	int daysInMonth(int month, int year);
 	bool verify_data(int day, int month, int year);
+	int toDays();
 
 	NgayThangNam operator+(int ngay);
 	NgayThangNam operator-(int ngay);
@@ -33,5 +34,5 @@ public:
 	
 
 	friend istream& operator>>(istream& is, NgayThangNam& a);
-	friend ostream& operator<<(ostream& os, NgayThangNam& a);
+	friend ostream& operator<<(ostream& os, const NgayThangNam& a);
 };

@@ -26,7 +26,7 @@ public:
     friend bool operator!=(const Phanso& lhs, const Phanso& rhs);
 
 	friend istream& operator>>(istream& is, Phanso& ps);
-	friend ostream& operator<<(ostream& os, Phanso& ps);
+	friend ostream& operator<<(ostream& os,const Phanso& ps);
 
     void Rutgon();
 };

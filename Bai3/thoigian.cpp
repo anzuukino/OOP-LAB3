@@ -30,9 +30,7 @@ Thoigian::Thoigian() {
  * @return void
  */
 Thoigian::Thoigian(int iGio, int iPhut, int iGiay) {
-    this->iGio = iGio;
-    this->iPhut = iPhut;
-    this->iGiay = iGiay;
+    TinhLaiGio(iGio * 3600 + iPhut * 60 + iGiay);
 }
 
 /**
@@ -287,5 +285,6 @@ istream& operator>> (istream& is, Thoigian& dt) {
     is >> dt.iGio;
     is >> dt.iPhut;
     is >> dt.iGiay;
+	dt.TinhLaiGio(dt.TinhGiay());
     return is;
 }

@@ -101,8 +101,8 @@ NgayThangNam NgayThangNam::operator+(int ngay) {
  */
 NgayThangNam NgayThangNam::operator-(int ngay) {
     NgayThangNam kq = *this;
-    if (kq.TinhNgay() < ngay) {
-        cout << "Khong the tinh ngay, giu nguyen ngay ban dau" << endl;
+    if (kq.toDays() < ngay) {
+        cout << "Cant calculate, return default value" << endl;
         return kq;
     }
     kq.iNgay -= ngay;
@@ -118,12 +118,33 @@ NgayThangNam NgayThangNam::operator-(int ngay) {
 }
 
 /**
+ * Converts the date to the number of days since the beginning of the calendar.
+ * @return The date as an integer representing the number of days.
+ */
+
+int NgayThangNam::toDays() {
+    int total_days = 0;
+
+    for (int year = 1; year < iNam; year++) {
+        total_days += isLeapYear(year) ? 366 : 365;
+    }
+
+    for (int month = 1; month < iThang; month++) {
+        total_days += daysInMonth(month, iNam);
+    }
+
+    total_days += iNgay;
+
+    return total_days;
+}
+
+/**
  * Calculates the difference in days between two dates.
  * @param a: The date to subtract from the current date.
  * @return A new NgayThangNam object with the updated date.
  */
 NgayThangNam NgayThangNam::operator-(NgayThangNam a) {
-    int total_days = TinhNgay() - a.TinhNgay();
+    int total_days = a.toDays();
     NgayThangNam kq = *this;
     kq = kq - total_days;
     return kq;
@@ -260,7 +281,7 @@ istream& operator>>(istream& is, NgayThangNam& a) {
  * @param a: NgayThangNam object containing the date.
  * @return The output stream object.
  */
-ostream& operator<<(ostream& os, NgayThangNam& a) {
+ostream& operator<<(ostream& os, const NgayThangNam& a) {
     os << a.iNgay << "/" << a.iThang << "/" << a.iNam;
     return os;
 }
