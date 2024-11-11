@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+using namespace std;
 
 class NgayThangNam {
 private:
@@ -31,6 +32,6 @@ public:
 	friend bool operator>=(const NgayThangNam& lhs, const NgayThangNam& rhs);
 	
 
-	friend std::istream& operator>>(std::istream& is, NgayThangNam& a);
-	friend std::ostream& operator<<(std::ostream& os, NgayThangNam& a);
+	friend istream& operator>>(istream& is, NgayThangNam& a);
+	friend ostream& operator<<(ostream& os, NgayThangNam& a);
 };
