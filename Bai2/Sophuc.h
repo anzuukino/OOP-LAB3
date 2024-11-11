@@ -5,7 +5,7 @@ using namespace std;
 
 class Sophuc {
 private:
-	double dThuc, dAo;
+	int dThuc, dAo;
 public:
 	Sophuc();
 	Sophuc(int thuc, int ao);

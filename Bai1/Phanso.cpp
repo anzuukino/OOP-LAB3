@@ -222,7 +222,7 @@ istream& operator>>(istream& is, Phanso& ps) {
  * @return ostream The output stream
  */
 
-ostream& operator<<(ostream& os, Phanso ps) {
+ostream& operator<<(ostream& os, Phanso& ps) {
 	os << ps.iTu << "/" << ps.iMau;
 	return os;
 }
